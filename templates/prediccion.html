@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">    <title>Resultado de la Predicción</title>
+    <style>
+        body {
+            background-color: #ffffff; /* Fondo blanco */
+            font-family: 'Poppins', sans-serif;            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Esto centra verticalmente */
+        }
+
+        .container {
+            max-width: 600px; /* Se establece un ancho máximo */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Más sombra */
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333333;
+        }
+
+        .result {
+            font-size: 24px; /* Tamaño de fuente más grande */
+            font-weight: bold; /* Texto en negrita */
+            color: #000000; /* Color diferente para resaltar */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado de la Predicción</h1>
+        <p>La predicción de deserción es: <span class="result">{{ prediccion }}</span></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Deserción</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">    <style>
+        body {
+            background-color: #ffffff; /* Fondo blanco */
+            font-family: 'Poppins', sans-serif;            text-align: center;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Esto centra verticalmente */
+        }
+
+        .container {
+            max-width: 450px; /* Se redujo el ancho del contenedor */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        label, input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #00c8ff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c8ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresa los Datos</h1>
+        <form action="/predict" method="post">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+
+            <label for="genero">Género (1 para masculino, 0 para femenino):</label>
+            <input type="number" id="genero" name="genero" required>
+
+            <label for="estrato">Estrato:</label>
+            <input type="number" id="estrato" name="estrato" required>
+
+            <label for="materias_perdidas">Materias Perdidas:</label>
+            <input type="number" id="materias_perdidas" name="materias_perdidas" required>
+
+            <label for="promedio">Promedio Académico:</label>
+            <input type="number" id="promedio" name="promedio" step="0.1" required>
+
+            <input type="submit" value="Predecir">
+        </form>
+    </div>
+</body>
+</html>
